@@ -15,6 +15,8 @@ gem "lita-squirrel"
 
 ## Configuration
 
+Purely optional, no requirements are needed. If you want to change the chances that Lita will shout "SQUIRREL!" you can set the `likelihood` option in the config.
+
 ```ruby
 Lita.configure do |config|
   # ...
