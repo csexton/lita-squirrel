@@ -1,6 +1,9 @@
+
 # lita-squirrel
 
-TODO: Add a description of the plugin.
+Lita plugin to randomlly shout "squirrel!"
+
+![squirrel](https://cloud.githubusercontent.com/assets/16963/17448942/14142086-5b25-11e6-9043-f2df9be51000.gif)
 
 ## Installation
 
@@ -12,8 +15,17 @@ gem "lita-squirrel"
 
 ## Configuration
 
-TODO: Describe any configuration attributes the plugin exposes.
+```ruby
+Lita.configure do |config|
+  # ...
 
-## Usage
+  # The likelihood is determined by calling `rand(1000) == 0`
+  config.handlers.squirrel.likelihood = 1000
+end
+```
 
-TODO: Describe the plugin's features and how to use them.
+## License
+
+MIT
+
+

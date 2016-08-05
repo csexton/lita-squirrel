@@ -1,9 +1,10 @@
 module Lita
   module Handlers
     class Squirrel < Handler
-      # insert handler code here
+      config :likelihood, default: 1000
+
       route(/.+/) do |response|
-        response.body << "SQUIRREL!"
+        response.reply "SQUIRREL!" if rand(config.likelihood) == 0
       end
 
       Lita.register_handler(self)
